@@ -1,15 +1,22 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
-      "src": "./index.js",
-      "use": "@vercel/node@2.5.10"
+      "src": "app.js",
+      "use": "@vercel/node@4.0.0"
     }
   ],
+  "functions": {
+    "app.js": {
+      "maxDuration": 30,
+      "runtime": "nodejs18.x"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/app.js"
     }
-  ]
+  ],
+  "installCommand": "npm install"
 }
