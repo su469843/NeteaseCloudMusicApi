@@ -1,5 +1,5 @@
 {
-  "version": 2,  // 修改为 2
+  "version": 2, 
   "builds": [
     {
       "src": "app.js",
