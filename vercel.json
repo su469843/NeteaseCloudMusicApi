@@ -1,22 +1,15 @@
 {
-  "version": 3,
+  "version": 2,  // 修改为 2
   "builds": [
     {
       "src": "app.js",
-      "use": "@vercel/node@4.0.0"
+      "use": "@vercel/node"
     }
   ],
-  "functions": {
-    "app.js": {
-      "maxDuration": 30,
-      "runtime": "nodejs18.x"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/app.js"
     }
-  ],
-  "installCommand": "npm install"
+  ]
 }
